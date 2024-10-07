@@ -28,13 +28,14 @@ public class Client {
 					+"2 to print allBowlers\n"
 			+"3 to print all rcb batters\n" + "4 to print all mi batters\n" + "5 to print all csk batters\n"
 			+"6 to print all rcb bowlers\n" + "7 to print all mi bowlers\n" + "8 to print all csk bowlers\n"
-			+"9 to print name startwith players \n"+"10 to add players in rcb \n"+"EXIT!!!");
+			+"9 to print name startwith players \n"+"10 to add players in rcb \n"+"11 EXIT!!!");
 
 			int option = sc.nextInt();
 			sc.nextLine();
 
 			switch (option){
 			case 0 :
+				System.out.println("List Of all Batters In IPL :");
 				List<Players> list = c.allBattersInIPL();
 				Collections.sort(list, (p1, p2) -> Integer.compare(p2.getRuns(), p1.getRuns()));
 
@@ -175,7 +176,7 @@ public class Client {
 					break;
 				case 11:
 					System.out.println("Exiting the application. Thank you!");
-					System.exit(0); // Exit the program
+					System.exit(0); 
 					break;
 				default:
 					System.out.println("Invalid option. Please try again.");
